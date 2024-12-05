@@ -1,7 +1,7 @@
-﻿using AspNetCore.ResponseWrapper.Abstractions;
+﻿using DotNetCore.ResponseWrapper.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCore.ResponseWrapper
+namespace DotNetCore.ResponseWrapper
 {
     /// <summary>
     /// Default wrapper for <see cref="ObjectResult"/>

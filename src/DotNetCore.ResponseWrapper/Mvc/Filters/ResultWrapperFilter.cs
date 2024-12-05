@@ -1,9 +1,9 @@
-﻿using AspNetCore.ResponseWrapper.Abstractions;
-using AspNetCore.ResponseWrapper.Mvc.Abstractions;
+﻿using DotNetCore.ResponseWrapper.Abstractions;
+using DotNetCore.ResponseWrapper.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace AspNetCore.ResponseWrapper.Mvc.Filters
+namespace DotNetCore.ResponseWrapper.Mvc.Filters
 {
     public class ResultWrapperFilter : IResultWrapperFilter
     {

@@ -1,5 +1,9 @@
-# AspNetCore.ResponseWrapper
-AspNetCore.ResponseWrapper is a HTTP API response wrapper, It supports various Action return type, Model invalid wrapper, Swagger response display and also supports custom response wrapper.
+forked from huiyuanai709/AspNetCore.ResponseWrapper
+Support warpper JsonResult
+
+
+# DotNetCore..ResponseWrapperDotNetCore..ResponseWrapper
+DotNetCore..ResponseWrapper is a HTTP API response wrapper, It supports various Action return type, Model invalid wrapper, Swagger response display and also supports custom response wrapper.
 
 ## Features:
 
@@ -45,5 +49,5 @@ See samples...
 
 ## Installation
 ```shell
-dotnet add Package AspNetCore.ResponseWrapper
+dotnet add Package DotNetCore..ResponseWrapper
 ```

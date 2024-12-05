@@ -1,4 +1,4 @@
-﻿using AspNetCore.ResponseWrapper.Abstractions;
+﻿using DotNetCore.ResponseWrapper.Abstractions;
 
 namespace CustomResponseWrapper.ResponseWrapper;
 

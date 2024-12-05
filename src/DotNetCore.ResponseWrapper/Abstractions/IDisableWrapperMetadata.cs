@@ -1,4 +1,4 @@
-﻿namespace AspNetCore.ResponseWrapper.Abstractions
+﻿namespace DotNetCore.ResponseWrapper.Abstractions
 {
     public interface IDisableWrapperMetadata
     {

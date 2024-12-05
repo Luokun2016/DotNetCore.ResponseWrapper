@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
-using AspNetCore.ResponseWrapper.Abstractions;
+using DotNetCore.ResponseWrapper.Abstractions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
 
-namespace AspNetCore.ResponseWrapper.Mvc.Filters
+namespace DotNetCore.ResponseWrapper.Mvc.Filters
 {
     public class ModelInvalidWrapperFilter : IActionFilter
     {
@@ -23,7 +23,7 @@ namespace AspNetCore.ResponseWrapper.Mvc.Filters
             LogLevel.Debug,
             new EventId(1, "ModelStateInvalidFilterExecuting"),
             "The request has model state errors, returning an error response.");
-    
+
         public void OnActionExecuting(ActionExecutingContext context)
         {
             if (context.Result == null && !context.ModelState.IsValid)

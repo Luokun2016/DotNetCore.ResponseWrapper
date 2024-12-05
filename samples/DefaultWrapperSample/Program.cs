@@ -1,4 +1,4 @@
-using AspNetCore.ResponseWrapper;
+using DotNetCore.ResponseWrapper;
 
 var builder = WebApplication.CreateBuilder(args);
 

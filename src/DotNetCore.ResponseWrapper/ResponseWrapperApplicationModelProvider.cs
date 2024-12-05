@@ -2,16 +2,16 @@
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using AspNetCore.ResponseWrapper.Abstractions;
-using AspNetCore.ResponseWrapper.Mvc.Filters;
+using DotNetCore.ResponseWrapper.Mvc.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using DotNetCore.ResponseWrapper.Abstractions;
 
-namespace AspNetCore.ResponseWrapper
+namespace DotNetCore.ResponseWrapper
 {
     public class ResponseWrapperApplicationModelProvider : IApplicationModelProvider
     {
@@ -56,7 +56,7 @@ namespace AspNetCore.ResponseWrapper
                 {
                     continue;
                 }
-            
+
                 if (controllerModel.Attributes.OfType<IDisableWrapperMetadata>().Any())
                 {
                     if (!_suppressModelInvalidWrapper)
@@ -139,7 +139,7 @@ namespace AspNetCore.ResponseWrapper
                 AddWrapperFilter();
             }
         }
-    
+
         private static bool IsApiController(ControllerModel controller)
         {
             if (controller.Attributes.OfType<IApiBehaviorMetadata>().Any())

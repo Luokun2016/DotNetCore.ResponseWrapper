@@ -1,4 +1,4 @@
-﻿namespace AspNetCore.ResponseWrapper
+﻿namespace DotNetCore.ResponseWrapper
 {
     public static class ResponseWrapperDefaults
     {

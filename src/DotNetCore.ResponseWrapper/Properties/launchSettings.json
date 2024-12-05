@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "DotNetCore.ResponseWrapper": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "DotNetCore_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:60098;http://localhost:60099"
+    }
+  }
+}
