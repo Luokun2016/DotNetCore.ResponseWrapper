@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.StaticFiles;
+using System.Reflection.Metadata;
+using System.Web;
 
 namespace DefaultWrapperSample.Controllers;
 
@@ -87,6 +90,12 @@ public class WeatherForecastController : ControllerBase
     {
     }
 
+    [HttpGet("ok")]
+    public IActionResult Ok1()
+    {
+        return Ok();
+    }
+
     [HttpGet("EmptyAsync")]
     public async Task EmptyAsync()
     {
@@ -98,5 +107,17 @@ public class WeatherForecastController : ControllerBase
     {
         await Task.CompletedTask;
         return forecast;
+    }
+
+    [HttpGet("download-file")]
+    public IActionResult DownloadTemplate()
+    {
+        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Test.xlsx");
+        var fileExt = Path.GetExtension(filePath);
+        var provider = new FileExtensionContentTypeProvider();
+        var contentType = provider.Mappings[fileExt];
+        FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
+        var result = new Tuple<string, string, FileStream>($"Test.xlsx", contentType, fs);
+        return File(result.Item3, result.Item2, HttpUtility.UrlEncode(result.Item1));
     }
 }

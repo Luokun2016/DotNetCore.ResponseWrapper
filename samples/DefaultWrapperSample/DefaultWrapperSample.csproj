@@ -14,4 +14,10 @@
       <ProjectReference Include="..\..\src\DotNetCore.ResponseWrapper\DotNetCore.ResponseWrapper.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Test.xlsx">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

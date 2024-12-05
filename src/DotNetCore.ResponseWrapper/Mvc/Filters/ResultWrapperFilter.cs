@@ -25,6 +25,7 @@ namespace DotNetCore.ResponseWrapper.Mvc.Filters
             switch (context.Result)
             {
                 case EmptyResult:
+                case OkResult:
                     context.Result = new OkObjectResult(_responseWrapper.Ok());
                     return;
                 case ObjectResult objectResult:
