@@ -30,6 +30,9 @@ namespace AspNetCore.ResponseWrapper.Mvc.Filters
                 case ObjectResult objectResult:
                     context.Result = new OkObjectResult(_responseWithDataWrapper.Ok(objectResult.Value));
                     return;
+                case JsonResult jsonResult:
+                    context.Result = new OkObjectResult(_responseWithDataWrapper.Ok(jsonResult.Value));
+                    return;
             }
         }
     }
