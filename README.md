@@ -1,5 +1,5 @@
-forked from huiyuanai709/AspNetCore.ResponseWrapper
-Support warpper JsonResult
+# forked from huiyuanai709/AspNetCore.ResponseWrapper
+Add new feature: Support warpper JsonResult
 
 
 # DotNetCore..ResponseWrapperDotNetCore..ResponseWrapper
@@ -12,6 +12,7 @@ DotNetCore..ResponseWrapper is a HTTP API response wrapper, It supports various 
 3. Swagger response wrapped type display
 4. Custom response wrapper
 5. Disable response wrapper for specified Controller/Action
+6. Support warpper ObjectResult/JsonResult
 
 ## Usage
 
